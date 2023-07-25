@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/sigma@1.2.1/build/sigma.min.js"></script>
+    
+    <style>
+        #tree-container1 {
+          width : 710px;
+          height : 463px;
+          margin: 20px;
+          border-style: solid;
+          border-width: 1px;
+          border-color: black;
+          flex: 3;
+          float: left;
+        }
+
+        #tree-container2 {
+          width : 710px;
+          height : 463px;
+          margin: 20px;
+          border-style: solid;
+          border-width: 1px;
+          border-color: black;
+          flex: 3;
+          float: left;
+        }
+
+        #head {
+          color: rgb(35, 167, 99);
+          width: auto;
+          height: auto;
+          text-align: center;
+          background-color: rgb(186, 205, 186);
+          margin: 20px;
+          padding: 7px;
+          border-style: solid;
+          border-width: 1px;
+          border-color: black;
+        }
+
+        #heap1 {
+            width: auto;
+            height: auto;
+            text-align: center;
+            background-color: rgb(186, 205, 186);
+            margin: 20px;
+            padding: 10px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+          }
+
+        #heap2 {
+            width: auto;
+            height: auto;
+            text-align: center;
+            background-color:rgb(186, 205, 186);
+            margin: 20px;
+            padding: 10px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+
+          }
+          
+        #insrt{
+            width: 100px;
+            background-color: rgb(186, 205, 186);
+        }
+
+        #insrt2{
+            width: 100px;
+            background-color: rgb(186, 205, 186);
+        }
+
+        #txtbox{
+            width: 45%;
+            height: auto;
+            text-align: center;
+            background-color: rgb(125, 125, 125);
+            margin-top: 6px;
+            margin : 20px;
+            padding: 15px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(66, 68, 64);
+            float:left;
+        }
+
+        #txtbox2{
+            width: 45%;
+            height: auto;
+            text-align: center;
+            background-color: rgb(125, 125, 125);
+            margin-top: 6px;
+            margin : 20px;
+            padding: 15px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(66, 68, 64);
+            float:left;
+        }
+        
+    </style>
+    <title>Leftist Heap</title>
+</head>
+<body>
+    <!-- <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h1" style="padding: 10px 70px;">Scapegoat Tree</span>
+    </nav> -->
+        <h1 id="head">Leftist Heap</h1>
+
+        <div id="txtbox">
+            <div id="heap1">Heap 1</div>
+            <input type="text" id="insrt" name="fname">
+            <button type="button" onclick="selectText()" >Insert</button>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+            <button type="button" onclick="mindel()">Delete Minimum Element</button>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+            <button type="button" onclick="merge()">Merge Heap 1 and 2</button>
+        </div>
+
+        <div id="txtbox2">
+            <div id="heap2">Heap 2</div>
+            <input type="text" id="insrt2" name="fname2">
+            <button type="button" onclick="selectText2()" >Insert</button>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+            <button type="button" onclick="mindel2()">Delete Minimum Element</button>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+            <button type="button" onclick="reset()">Reset</button>
+            
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+        <div id="tree-container1" class="shadow p-3 mb-5 bg-white rounded"></div>
+        <div id="tree-container2" class="shadow p-3 mb-5 bg-white rounded"></div>
+        
+        <br><br>
+
+    <script src="sigma.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
